@@ -1,0 +1,288 @@
+body {
+  background-color: hsl(260, 7%, 9%);
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 
+
+Utility classes
+
+*/
+.container {
+  padding-inline: 2rem;
+}
+.btn {
+  border: none;
+  height: 100%;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.btn svg {
+  width: 1rem;
+  color: white;
+}
+/* 
+
+Header
+
+*/
+header {
+  background-color: hsl(225, 6%, 13%);
+  padding-block: 0.7rem;
+  border: rgba(255, 255, 255, 0.199) solid;
+  border-width: 0 0 0.001rem 0;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav a {
+  text-decoration: none;
+  color: white;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2rem;
+}
+.logo img {
+  max-width: 3rem;
+}
+
+/* 
+
+Sidebar
+
+*/
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  max-width: 15rem;
+  background-color: hsl(225, 6%, 13%);
+  height: 100vh;
+  border: rgba(255, 255, 255, 0.199) solid;
+  border-width: 0 0.01rem 0 0;
+  position: relative;
+  overflow: hidden;
+}
+.sidebar-title {
+  padding: 2rem;
+}
+.category-links {
+  display: flex;
+  flex-direction: column;
+}
+.category-links a {
+  text-decoration: none;
+  color: white;
+  padding-left: 2rem;
+  padding-block: 1rem;
+}
+.active-category {
+  background-color: hsla(259, 56%, 50%, 0.219);
+  border: hsl(259, 56%, 50%) solid;
+  border-width: 0 0 0 0.2rem;
+  color: hsl(259, 56%, 50%) !important;
+}
+
+.create-category {
+  margin-inline: 0.5rem;
+}
+
+/* 
+
+content
+
+*/
+.create {
+  padding-bottom: 5rem;
+}
+.create-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+.content {
+  position: absolute;
+  top: 7rem;
+  left: 15rem;
+  width: 70%;
+}
+.form {
+  display: flex;
+  background-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.input-field {
+  border: none;
+  padding: 0.3rem;
+  width: 100%;
+}
+.input-field:focus {
+  outline: none;
+}
+
+.create-input {
+  display: flex;
+}
+
+.submit-btn {
+  background-color: hsl(259, 56%, 50%);
+  padding: 0 1rem;
+  height: unset;
+}
+.submit-btn:hover {
+  background-color: hsl(259, 57%, 36%);
+}
+
+.check-btn {
+  background-color: hsl(101, 56%, 50%);
+}
+.check-btn:hover {
+  background-color: hsl(101, 55%, 31%);
+}
+
+.uncheck-btn {
+  background-color: hsl(37, 56%, 50%);
+}
+.uncheck-btn:hover {
+  background-color: hsl(37, 54%, 39%);
+}
+
+.delete-btn {
+  background-color: hsl(4, 56%, 50%);
+}
+.delete-btn:hover {
+  background-color: hsl(4, 56%, 31%);
+}
+
+.edit-btn {
+  background-color: hsl(259, 56%, 50%);
+}
+.edit-btn:hover {
+  background-color: hsl(259, 57%, 36%);
+}
+
+.tasks .form {
+  margin-bottom: 2rem;
+}
+
+.input-form {
+  width: 100%;
+}
+
+#authentication {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.auth-container {
+  background-color: hsl(260, 7%, 9%);
+  box-sizing: border-box;
+  width: 400px;
+  padding: 30px;
+  border: 1px solid black;
+}
+
+.auth-container h4 {
+  margin: 0 0 20px 0;
+}
+
+.alert {
+  padding: 1rem;
+  margin-bottom: 20px;
+  background-color: white;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  border: 1px solid black;
+}
+
+.alert.success {
+  border-color: green;
+  color: green;
+}
+
+.alert.danger {
+  border-color: red;
+  color: red;
+}
+
+.input-container + .input-container {
+  margin-top: 10px;
+}
+
+.input-container label {
+  display: block;
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+}
+
+.input-container input {
+  background-color: hsla(0, 0%, 49%, 0.082);
+  border: none;
+  border-bottom: solid 0.1rem white;
+}
+
+.input-container input:focus {
+  outline: none;
+}
+
+.input-container input,
+.input-container select,
+.input-container textarea {
+  color: white;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 7px;
+  resize: vertical;
+}
+
+.input-container textarea {
+  min-height: 100px;
+}
+
+.btn-primary {
+  border: 1px solid black;
+  background-color: hsl(259, 56%, 50%);
+  color: white;
+}
+
+.btn-secondary {
+  border: 1px solid black;
+  background-color: hsl(259, 56%, 50%);
+  color: white;
+}
+.btn-tertiary {
+  border: 1px solid black;
+  background-color: hsl(259, 55%, 38%);
+  color: white;
+}
+
+.footer-container {
+  display: flex;
+  margin-top: 40px;
+  justify-content: space-between;
+}
+
+.footer-container a {
+  border: none;
+  color: rgb(0, 102, 255);
+  font-size: 0.9rem;
+}
+.footer-container a:hover {
+  color: rgb(3, 60, 146);
+}
+
+.footer-container .btn + .btn {
+  margin-left: 10px;
+}

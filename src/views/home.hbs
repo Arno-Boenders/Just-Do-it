@@ -1,0 +1,23 @@
+<main>
+    {{> sidebar}}
+    <div class="content container">
+    {{#if flash.message}}
+      <div class="alert {{ flash.type}}">
+        {{ flash.message}}
+      </div>
+    {{/if}}
+    {{!-- create --}}
+    <div class="create">
+        {{> create}}
+    </div>
+    
+    {{!-- tasks --}}
+    <div class="tasks">
+        {{> task}}
+    </div>
+
+    <div class="tasks">
+      {{> finished}}
+    </div>
+  </div>
+</main>

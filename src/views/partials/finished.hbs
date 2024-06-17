@@ -1,0 +1,44 @@
+<h2 class="title">Things you've done!</h2>
+{{#each tasks as |todo|}}
+  {{#if todo.is_done}}
+    <div action="" class="form">
+      <form action="/task" method="POST">
+        <input type="hidden" name="isDone" value="PUT" />
+        <input type="hidden" name="id" value="{{todo.id}}" />
+        {{#button "submit" "uncheck-btn"}}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="feather feather-x"
+            viewBox="0 0 24 24"
+          ><path d="M18 6 6 18M6 6l12 12" /></svg>
+        {{/button}}
+      </form>
+      {{#task "What is your task?" "" "disabled"}}{{todo.content}}{{/task}}
+      <form action="/task" method="POST">
+        <input type="hidden" name="method" value="DELETE" />
+        <input type="hidden" name="id" value="{{todo.id}}" />
+        {{#button "submit" "delete-btn"}}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="feather feather-trash-2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M10 11v6M14 11v6"
+            />
+          </svg>
+        {{/button}}
+      </form>
+    </div>
+  {{/if}}
+{{/each}}

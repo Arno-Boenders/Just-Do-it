@@ -1,0 +1,46 @@
+<div class="create-top">
+  <h2 class="title">Welcome
+    {{user.firstname}}!
+    <br />We've got things to do!</h2>
+  <form action="/mail" method="POST" class="form">
+    <input type="hidden" name="method" value="POST" />
+    <input type="hidden" name="category_id" value="{{category.id}}" />
+    {{#task "E-mail address" "email" ""}}{{/task}}
+    {{#button "submit" "submit-btn"}}
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        class="feather feather-mail"
+        viewBox="0 0 24 24"
+      ><path
+          d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+        /><path d="m22 6-10 7L2 6" /></svg>
+    {{/button}}
+  </form>
+</div>
+<form action="/task" method="POST" class="form">
+  <input type="hidden" name="method" value="POST" />
+  <input type="hidden" name="category_id" value="{{category.id}}" />
+  {{#task "What is your task?" "content" ""}}{{/task}}
+  {{#button "submit" "submit-btn"}}
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      class="feather feather-plus"
+      viewBox="0 0 24 24"
+    >
+      <path d="M12 5v14M5 12h14" />
+    </svg>
+  {{/button}}
+</form>
+{{#if err}}
+  <div class="error">{{err}}</div>
+{{/if}}

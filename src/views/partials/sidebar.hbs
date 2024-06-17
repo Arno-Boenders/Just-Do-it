@@ -1,0 +1,30 @@
+<div class="sidebar">
+  <h3 class="sidebar-title">Categories</h3>
+  <div class="category-links">
+    {{#each categories as |category|}}
+      <a href="{{category.slug}}" class="active-category">{{category.name}}</a>
+    {{/each}}
+  </div>
+  <div class="create-category">
+    <h3 class="title">Add category</h3>
+    <form action="/task" method="POST" class="form">
+      <input type="hidden" name="category" value="POST" />
+      {{#task "Category name" "name" ""}}{{/task}}
+      {{#button "submit" "submit-btn"}}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          class="feather feather-plus"
+          viewBox="0 0 24 24"
+        >
+          <path d="M12 5v14M5 12h14" />
+        </svg>
+      {{/button}}
+    </form>
+  </div>
+
+</div>

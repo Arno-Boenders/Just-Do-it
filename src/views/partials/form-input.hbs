@@ -1,0 +1,11 @@
+ <div class="input-container">
+  <label for="{{name}}">{{label}}</label>
+  {{#eq type "textarea"}}
+    <textarea name="{{name}}">{{value}}</textarea>
+  {{else}}
+      <input type="{{type}}" name="{{name}}" value="{{value}}">
+  {{/eq}}
+  {{#if err}}
+    <div class="error">{{err}}</div>
+  {{/if}}
+</div>

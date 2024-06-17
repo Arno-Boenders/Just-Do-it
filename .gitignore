@@ -1,0 +1,15 @@
+# General
+.cache
+package-lock.json
+
+# OS specific
+.DS_Store
+
+# Node
+node_modules
+
+# Comment this out to exclude .env
+.env
+
+# Database
+knex-demo.sqlite3
